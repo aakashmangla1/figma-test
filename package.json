@@ -1,0 +1,16 @@
+{
+  "name": "figma-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/aakashmangla1/figma-test.git",
+  "author": "Aakash <aakash.mangla@invansys.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^2.0.1",
+    "style-dictionary": "^5.1.1"
+  },
+  "type": "module",
+  "scripts": {
+    "build:tokens": "style-dictionary build --config ./sd.config.mjs"
+  }
+}
