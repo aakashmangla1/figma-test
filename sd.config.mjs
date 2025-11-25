@@ -10,7 +10,14 @@ export default {
     preprocessors: ['tokens-studio'],
     platforms: {
         scss: {
-            transforms: ['ts/size/px', 'ts/opacity', 'name/kebab'],
+            "expand": true,
+            transforms: [
+                "attribute/cti",
+                'ts/resolveMath',
+                'size/rem',
+                'ts/opacity',
+                'name/kebab'
+            ],
             buildPath: 'src/styles/',
             files: [
                 {
@@ -21,7 +28,7 @@ export default {
                 {
                     destination: '_layout.scss',
                     format: 'scss/variables',
-                    filter: (token) => token.$type === 'spacing',
+                    filter: (token) => token.$type !== 'color',
                 },
             ],
         },
